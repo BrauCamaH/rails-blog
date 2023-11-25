@@ -10,3 +10,10 @@
     turbo_confirm: "Are you sure?"
   }), class: "button  is-danger"
 %>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2 class="title is-5">Add a comment</h2>
+
+<%= render "comments/form" %>

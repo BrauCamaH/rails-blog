@@ -2,11 +2,12 @@
 
 <ul class="mb-6">
   <% @articles.each do |article| %>
-    <li class="navbar-item card m-1 full-width">
-      <%= link_to article.title, article %>
-    </li>
+    <% unless article.archived? %>
+      <li class="navbar-item card m-1 full-width">
+        <%= link_to article.title, article %>
+      </li>
+    <%end%>
   <% end %>
 </ul>
 
-
-<%= link_to "New Article", new_article_path, class: "button primary"%>
+<%= link_to "New Article", new_article_path, class: "button primary" %>
