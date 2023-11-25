@@ -1,0 +1,12 @@
+<h1 class="title"><%= @article.title %></h1>
+<p class="p-4 card subtitle">
+  <%= @article.body %>
+</p>
+
+<%= link_to "Edit", edit_article_path(@article), class: "button is-warning" %>
+<%=
+  link_to "Delete", article_path(@article), data: ({
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  }), class: "button  is-danger"
+%>
