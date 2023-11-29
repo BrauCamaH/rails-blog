@@ -1,3 +1,5 @@
+<%= link_to 'Back', :back, class: "button" %>
+
 <h1 class="title"><%= @article.title %></h1>
 <p class="p-4 card subtitle">
   <%= @article.body %>
@@ -11,8 +13,12 @@
   }), class: "button  is-danger"
 %>
 
-<h2>Comments</h2>
+<hr class="divider" />
+
+<h2 class="title is_4 mt-4 ">Comments</h2>
 <%= render @article.comments %>
+
+<br class="divider" />
 
 <h2 class="title is-5">Add a comment</h2>
 

@@ -1,17 +1,18 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
-    <%= form.label :commenter %><br />
-    <%= form.text_field :commenter %>
+    <%= form.label :commenter, class: "label" %><br />
+    <%= form.text_field :commenter, class: "input" %>
   </p>
   <p>
-    <%= form.label :body %><br />
-    <%= form.text_area :body %>
+    <%= form.label :body , class: "label" %><br />
+    <%= form.text_area :body, class: "texarea" %>
   </p>
-  <p>
+  <span>
     <%= form.label :status %><br />
     <%= form.select :status, Visible::VALID_STATUSES, selected: 'public' %>
-  </p>
+  </span>
+
   <p>
-    <%= form.submit %>
+    <%= form.submit nil, :class => "button is-primary mt-2" %>
   </p>
 <% end %>
